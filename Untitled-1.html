@@ -1,0 +1,25 @@
+<html>
+<script>
+funciton affcliwor()
+{
+var mylist= document.getElementById("myList");
+document.getElementById("Affect").value=mylist.options(mylist.selectIndex).text;
+}
+</script>
+
+<body>
+<form>
+Afffect Client Workflow
+<select id="myList" onchange="affcliwor">
+    <option>Yes-Critical</option>
+    <option>Yes-Non-Critical</option>
+    <option>No</option>
+</select>
+<p>Affect Client Workflow: <input type="text" id="Affect" size="20"></p>
+</form> 
+
+
+
+</body>
+
+</html>
