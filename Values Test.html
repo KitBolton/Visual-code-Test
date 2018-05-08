@@ -1,5 +1,9 @@
 <html>
 <script>
+var e = document.getElementById('foo');
+e.onclick = calculateTotal;
+function calculateTotal()
+
 funciton affcliwor()
 {
 FIXME_VAR_TYPE mylist= document.getElementById("myList");
@@ -8,6 +12,7 @@ document.getElementById("Affect").value=mylist.options(mylist.selectIndex).text;
 
 
 </script>
+
 <style>
 p3.big {
     line-height: 2.5;
@@ -20,9 +25,9 @@ p3.big {
 <form>
  <p style="text-align:center">  <p1 style="font-size:20px"> <p3 class="big"> <b> Afffect Client Workflow </b> </p1> </p3>
 <select id="myList" onchange="affcliwor"> </p> <br>
-    <option>Yes-Critical</option>
-    <option>Yes-Non-Critical</option>
-    <option>No</option>
+    <option value="25">Yes-Critical</option>
+    <option value="10">Yes-Non-Critical</option>
+    <option value="0">No</option>
 </select>
 </form> 
 
@@ -30,9 +35,9 @@ p3.big {
 <form>
 <b> <p style="text-align:center"> <p1 style="font-size:20px"> <p3 class="big"> Afffecting Applicants Applying </b> </p1> </p3>
 <select id="myList" onchange="affcliwor"> </p>
-    <option>Yes-Critical</option>
-    <option>Yes-Non-Critical</option>
-    <option>No</option>
+    <option value="25">Yes-Critical</option>
+    <option value="10">Yes-Non-Critical</option>
+    <option value="0">No</option>
 </select>
 </form> 
 
@@ -40,8 +45,8 @@ p3.big {
 <form>
 <p style="text-align:center"> <p1 style="font-size:20px"> <p3 class="big"> <b>New Clients 60 Day Since Signup</b> </p1> </p3>
 <select id="myList" onchange="affcliwor"> </p>
-    <option>Yes</option>
-    <option>No</option>
+    <option value="25">Yes</option>
+    <option value="0">No</option>
 </select>
 </form> 
 
@@ -49,8 +54,8 @@ p3.big {
 <form>
 <p style="text-align:center"> <p1 style="font-size:20px"> <p3 class="big"> <b>Client On Trial</b> </p1> </p3>
 <select id="myList" onchange="affcliwor"> </p>
-    <option>Yes</option>
-    <option>No</option>
+    <option value="25">Yes</option>
+    <option value="0">No</option>
 </select>
 </form> 
 
@@ -63,9 +68,9 @@ p3.big {
 <form>
 <p style="text-align:center"> <p1 style="font-size:20px"> <p3 class="big"> <b>WorkAround</b> </p1> </p3>
 <select id="myList" onchange="affcliwor"> </p>
-    <option>Yes Full</option>
-    <option>Yes Partial</option>
-    <option>No</option>
+    <option value="25">Yes Full</option>
+    <option value="10">Yes Partial</option>
+    <option value="0">No</option>
 </select>
 </form>
 
@@ -73,7 +78,8 @@ p3.big {
 <body>
 
 <p style="text-align:center"> <p1 style="font-size:20px"> <p3 class="big"> <button type="button" onclick="alert('Client Low')">Check Bug Priority</button> </p> </p1> </p3>
- 
+
+
 </body>
 </html>
 
