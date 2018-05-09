@@ -17,18 +17,18 @@ function calculateTotal() {
 </script>
 
 
-<p id="Demo"></p>
-
 
 <script>
 
+<p id="Demo"></p>
+
 Bridge.assembly("Demo", function ($asm, globals) {
     "use strict";
-
-    Bridge.define("test.Program", {
+    Bridge.define("test.Program", 
+    e.onclick= Main
         main: function Main (args) {
             var prioritycheck;
-            System.Console.WriteLine("check priority: ");
+            System.Console.WriteLine("checkPriority: ");
             prioritycheck = System.Convert.toInt32(prompt());
             if ((prioritycheck > 0) && (prioritycheck <= 20)) {
                 System.Console.WriteLine("you are low priority");
@@ -43,7 +43,7 @@ Bridge.assembly("Demo", function ($asm, globals) {
             prompt();
         }
     });
-});
+})
 </script>
 
 </html>
@@ -121,7 +121,6 @@ Bridge.assembly("Demo", function ($asm, globals) {
 <form>
 <p1 style= "font-size:20px"> <b> Explain Bug</b> </p1>
 </form>
-
 <textarea rows="10" cols="50" name="comment" form="usrform">
 </textarea>
 
@@ -129,7 +128,7 @@ Bridge.assembly("Demo", function ($asm, globals) {
 
 <p style="text-align:center"> <p1 style="font-size:20px"> <p3 class="big">  Score: <input type="text" name="ScoreTot" id="ScoreTot" value="">
 
-<input type="button" id="foo" value="Check Bug Priority" onclick="calculateTotal()" />
+<input type="button" id="foo" value="Check Bug Score" onclick="calculateTotal()" onclick="Main" />
 
 </body>
 
