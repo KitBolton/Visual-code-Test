@@ -19,16 +19,13 @@ function calculateTotal() {
 
 
 <script>
-
-<p id="Demo"></p>
-
 Bridge.assembly("Demo", function ($asm, globals) {
     "use strict";
-    Bridge.define("test.Program", 
-    e.onclick= Main
+
+    Bridge.define("test.Program", {
         main: function Main (args) {
             var prioritycheck;
-            System.Console.WriteLine("checkPriority: ");
+            System.Console.WriteLine("check priority: ");
             prioritycheck = System.Convert.toInt32(prompt());
             if ((prioritycheck > 0) && (prioritycheck <= 20)) {
                 System.Console.WriteLine("you are low priority");
@@ -43,7 +40,7 @@ Bridge.assembly("Demo", function ($asm, globals) {
             prompt();
         }
     });
-})
+});
 </script>
 
 </html>
@@ -125,10 +122,24 @@ Bridge.assembly("Demo", function ($asm, globals) {
 </textarea>
 
 
-
 <p style="text-align:center"> <p1 style="font-size:20px"> <p3 class="big">  Score: <input type="text" name="ScoreTot" id="ScoreTot" value="">
 
-<input type="button" id="foo" value="Check Bug Score" onclick="calculateTotal()" onclick="Main" />
+    <script>
+        if (ScoreTot=100)
+         {
+    <p>The price is high.</p>
+    }
+    else if (ScoreTot>20 && ScoreTot<30)  
+    {
+    <p>The price is OK.</p>
+    }
+    else
+    {
+    <p>The price is low.</p>
+    }
+</script>
+
+<input type="button" id="foo" value="Check Bug Score" onclick="calculateTotal()" onclick="test.program" />
 
 </body>
 
