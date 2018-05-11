@@ -12,35 +12,27 @@ function calculateTotal() {
     total += parseInt(elems[i].value * 1);
   }
   document.getElementById('ScoreTot').value = total;  
+  
 
+document.getElementById('ClientPriority').value = 'h';
 }
+
+
 
 </script>
 
 
-<script>
-Bridge.assembly("Demo", function ($asm, globals) {
-    "use strict";
-
-    Bridge.define("test.Program", {
-        main: function Main (args) {
-            var prioritycheck;
-            System.Console.WriteLine("checkpriority: ");
-            prioritycheck = System.Convert.toInt32(prompt());
-            if ((prioritycheck > 0) && (prioritycheck <= 20)) {
-                System.Console.WriteLine("you are low priority");
-            } else {
-                if ((prioritycheck > 20) && (prioritycheck <= 45)) {
-                    System.Console.WriteLine("you are medium priority");
-                } else {
-                    System.Console.WriteLine("you are high priority");
-                }
-            }
-
-            prompt();
-        }
-    });
-});
+ <script>
+    {var price= "ScoreTot";}
+    
+ if (price>30)
+  {
+  <p>The price is too high.</p>
+  }
+else
+  {
+  <p>The price is OK.</p>
+  }
 
 </script>
 
@@ -57,6 +49,8 @@ Bridge.assembly("Demo", function ($asm, globals) {
 <head>
 <head background="https://cdn.hiringplatform.com/assets/bg5.jpg"
 
+<div style="background-color:white; color:black; border: 0.1px solid black; margin-left:400px; margin-right:400px">
+<body background="https://cdn.hiringplatform.com/assets/bg5.jpg"
 
 <form>
 <h1 style= "background-color:green"</h1>
@@ -64,8 +58,7 @@ Bridge.assembly("Demo", function ($asm, globals) {
 </form>
 
 <body>
-    <div style="background-color:white; color:black; border: 0.1px solid black; margin-left:400px; margin-right:400px">
-<body background="https://cdn.hiringplatform.com/assets/bg5.jpg"
+    
 
 
 <form>
@@ -129,6 +122,15 @@ Bridge.assembly("Demo", function ($asm, globals) {
 <p style="text-align:center"> <p1 style="font-size:20px"> <p3 class="big">  Score: <input type="text" name="ScoreTot" id="ScoreTot" value="">
 
     <input type="button" id="foo" value="Check Bug Score" onclick="calculateTotal()"/>
+
+
+</script>
+<br/>
+<input type= "text" id="ClientPriority">
+
+
+</body>
+</html>
 
 
 </body>

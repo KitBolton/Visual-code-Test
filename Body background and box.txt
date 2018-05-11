@@ -1,0 +1,2 @@
+<div style="background-color:white; color:black; border: 0.1px solid black; margin-left:400px; margin-right:400px">
+<body background="https://cdn.hiringplatform.com/assets/bg5.jpg"
