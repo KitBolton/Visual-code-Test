@@ -1,7 +1,7 @@
 
 <script>
 var e = document.getElementById('foo');
-e.onclick = calculateTotal;
+
 
 function calculateTotal() {
 
@@ -12,17 +12,50 @@ function calculateTotal() {
     total += parseInt(elems[i].value * 1);
   }
   document.getElementById('ScoreTot').value = total;  
-  if (total => 20) 'ClientPriority'
+
   
-  
-  
+ switch(calculateTotal) {
+
+        default:
+            text = "Please stand by ...";
+            var text;
+
+        if (total <= 0)
+            text = "Bugs";
+            var text;
+
+        if (total <= 20 && total > 0)  
+        text = "Client Low";  
+
+        if  (total <= 45 && total > 20)
+            text = "Client Medium";
+            var text;
+
+        if  (total > 45)
+            text = "Client High";
+            var text;
+       
+    }
     
-  document.getElementById('ClientPriority').value = 'h';
-}
+    document.getElementById('ClientPriority').value = text;
+    }
+
+  
+
+if (isset($_SERVER['HTTP_REFERER']) && preg_match('/^http:\\/\\/file:///D:/Visual%20code%20Test/rando%20test.html\\//',$_SERVER['HTTP_REFERER']))
+
+// The message
+$message = "Line 1\nLine 2\nLine 3";
+
+// In case any of our lines are larger than 70 characters, we should use wordwrap()
+$message = wordwrap($message, 70);
+
+// Send
+mail('kit@vidinterns.com', 'My Subject', $message);
+
 
 
 </script>
-
 
 
 
@@ -115,7 +148,7 @@ function calculateTotal() {
 
 </script>
 <br/>
-<input type= "text" name=ClientPriority id="ClientPriority">
+<input type= "text" id="ClientPriority" name="ClientPriority" value="">
 
 
 </body>
