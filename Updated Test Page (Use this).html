@@ -41,113 +41,22 @@ function calculateTotal() {
     }
 
 
-
 </script>
 
 <script>
 
+function sendMail() {
+    var link = "mailto:kit@vidinterns.com"
+             + "?cc=kit@vidinterns.com"
+             + "&subject=" + escape("This is my subject")
+             + "&body=" + escape(document.getElementById('myText').value)
+    ;
 
-if(is_page(123))
-{
-
-$fromName = 'Auto email notification system';
-
-$subject = 'Confirmed';
-
-/* Mail Address */
-$toAddr = 'me@domain.com'; 
-$bccAddr = 'bccperson@domain.com'; 
-$fromAddr = 'no-reply@domain.com';
-/* End Mail Address */
-
-
-/* Mail Body */
-$msg = 
-<html>
-<head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title></title>
-</head>
-<body>
-my messages about confirmation...
-</body>
-</html>
-
-
-$msg = wordwrap($msg, 70);
-/* End Mail Body */
-
-
-/* Mail Headers Setup */
-$headers = array();
-$headers[] = "MIME-Version: 1.0";
-$headers[] = "Content-type: text/html; charset=utf-8";
-$headers[] = "From: ".$fromName." <".$fromAddr.">";
-$headers[] = "Bcc: <".$bccAddr.">";
-/* End Mail Headers Setup */
-
-
-mail($toAddr, $subject, $msg, implode("\r\n", $headers));
-
+    window.location.href = link;
 }
-
-
-</script>    
-   
-
-<script>
-
-<php
-
-if(is_page(file:///D:/Visual%20code%20Test/Updated%20Test%20Page%20(Use%20this).html))
-{
-
-$fromName = 'Auto email notification system',
-
-$subject = 'Confirmed',
-
-/* Mail Address */
-$toAddr = 'kitbolton884@gmail.com', 
-$bccAddr = 'bccperson@domain.com',
-$fromAddr = 'no-reply@domain.com',
-/* End Mail Address */
-
-
-/* Mail Body */
-$msg = 
-<html>
-<head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title></title>
-</head>
-<body>
-my messages about confirmation...
-</body>
-</html>
-,
-
-$msg = wordwrap($msg, 70),
-/* End Mail Body */
-
-
-/* Mail Headers Setup */
-$headers = array(),
-$headers:[] = "MIME-Version: 1.0",
-$headers:[] = "Content-type: text/html; charset=utf-8",
-$headers:[] = "From: ".$fromName," <":$fromAddr,">":
-$headers[] = "Bcc: <".$bccAddr,">":
-/* End Mail Headers Setup */
-
-
-mail($toAddr, $subject, $msg, implode("\r\n", $headers));
-
-}
-  
->
 
 </script>
 
-</html>
 
 <style>
     p3.big {
@@ -167,7 +76,11 @@ mail($toAddr, $subject, $msg, implode("\r\n", $headers));
 </form>
 
 <body>
-    
+
+<textarea id="myText">
+    Lorem ipsum...
+</textarea>
+<button onclick="sendMail(); return false">Send</button>    
 
 
 <form>
