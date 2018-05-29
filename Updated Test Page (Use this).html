@@ -48,7 +48,7 @@ function calculateTotal() {
 function sendMail() {
     var link = "mailto:kit@vidinterns.com"
              + "?cc=kit@vidinterns.com"
-             + "&subject=" + escape("This is my subject")
+             + "&subject=" + escape("Notification")
              + "&body=" + escape(document.getElementById('myText').value)
     ;
 
@@ -78,7 +78,7 @@ function sendMail() {
 <body>
 
 <textarea id="myText">
-    Lorem ipsum...
+   Hello
 </textarea>
 <button onclick="sendMail(); return false">Send</button>    
 

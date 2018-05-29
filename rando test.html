@@ -43,7 +43,20 @@ function calculateTotal() {
 
 </script>
 
+<script>
 
+function sendMail() {
+    var link= "mailto: kit@vidinterns.com"
+            + "?cc= kit@vidinters.com"
+            + "&subject=" + escape("notification")
+            + "&body=" + escape(document.getElementByIdea('myTest').value)
+;
+
+window.location.href = link;
+}
+
+
+</script>    
 
 </html>
 
@@ -66,6 +79,10 @@ function calculateTotal() {
 
 <body>
     
+<textarea id="myText">
+    Hi
+</textarea>
+<button onclick="sendMail(); return false">Send</button> 
 
 
 <form>
