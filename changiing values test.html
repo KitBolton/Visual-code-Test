@@ -1,0 +1,29 @@
+<script>
+$('#form_city').on('change', function(e){
+    var val = $(':selected', $(this)).val(),
+        val = val.split('-')[0],
+        val = val.replace(/\s+/g, ''),
+        char = ['F','L','U','S'],
+        tpl = '<option val="{val}">{val}</option>',
+        html='';
+    $(char).each(function(item,value){
+    	var opt = val+value;   
+       html += tpl.replace(/{val}/g, opt);
+    })   
+    
+    $('#form_cityselected').html(html).show();
+    
+})
+
+</script>
+
+<select name="form[city]" id="form_city">
+   <option value="">Select Office</option>
+   <option value="WA - Washington PD">WA - Washington PD</option>
+   <option value="CA - California PD">CA - California PD</option>
+   <option value="NY - NewYork PD">NY - NewYork PD</option>
+</select>
+
+<select name="form[cityselected]" id="form_cityselected">
+  
+</select>
